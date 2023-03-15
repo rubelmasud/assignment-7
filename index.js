@@ -23,8 +23,8 @@ startQuiz.addEventListener("click", () => {
 
   let x = setInterval(() => {
     if (counterNum < 0) {
-      coutDown.classList.remove("flex");
-      coutDown.classList.add("hidden");
+      countDown.classList.remove("flex");
+      countDown.classList.add("hidden");
       counterNum = 3;
       count = 0;
       timer = null;
@@ -46,8 +46,9 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json();
   quizData = data;
+  console.log('gfpiwvrao', data)
   displayQuiz(data);
 };
 
@@ -146,16 +147,15 @@ document.querySelector("#submit").addEventlistener("click", () => {
     </h1>
     <p class="text-sm flex justify-center items-center gap-2">
       Total Time: <span class="text-xl text-orange-500">${timeTaken.innerText.replace(
-        "sec",
-        ""
-      )}<span class="text-xs">sec</span></span>
+      "sec",
+      ""
+    )}<span class="text-xs">sec</span></span>
     </p>
   </div>
-  
+
   <button onclick="location.reload();" class="bg-green-600 text-white w-full py-2 rounded mt-16">Restart</button>
-  ${
-    storage
-      ? `<div class="mt-5">
+  ${storage
+        ? `<div class="mt-5">
       <h1 class="text-center">Previous Submissions <button class="text-blue-800 text-xs" onclick={localStorage.clear();location.reload()}>Clear History</button></h1>
     <div
     class="flex justify-between items-center border rounded p-2 my-2 shadow-sm font-medium">
@@ -164,18 +164,18 @@ document.querySelector("#submit").addEventlistener("click", () => {
     <div>Time</div>
     </div>
     ${storage
-      ?.reverse()
-      ?.map(
-        (item) => `<div
+          ?.reverse()
+          ?.map(
+            (item) => `<div
       class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
       <div>${item.marks}/60</div>
       <div>${item.status}</div>
       <div>${item.examTime}</div>
       </div>`
-      )
-      ?.join("")}`
-      : ""
-  }
+          )
+          ?.join("")}`
+        : ""
+      }
   </div>
   `;
 
