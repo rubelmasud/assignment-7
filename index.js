@@ -183,3 +183,9 @@ document.querySelector("#submit").addEventListener("click", () => {
   }, 1500);
   window.scrollTo(0, 0);
 });
+
+
+// quertion page
+const quertionPage = () => {
+  window.location.href = 'quertion&answer.html'
+}
