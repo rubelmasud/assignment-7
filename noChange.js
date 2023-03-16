@@ -13,9 +13,8 @@ const quizTimer = (dismiss) => {
     let min = covtMin.toString().length === 1 ? `0${covtMin}` : covtMin;
     let countSec = mod.toString().length === 1 ? `0${mod}` : mod;
 
-    countHtml.innerHTML = `${
-      min + ":" + countSec
-    }<sub class="text-xs">sec</sub>`;
+    countHtml.innerHTML = `${min + ":" + countSec
+      }<sub class="text-xs">sec</sub>`;
     count++;
     if (count > 60) {
       if (count % 2 === 0) {
@@ -71,32 +70,28 @@ const displayAnswers = (data) => {
     answersContainer.innerHTML += `<div class="text-left">
         <h1 class="mt-4 mb-3 text-sm">${idx + 1 + ". " + answer.question}</h1>
         <div class="flex justify-around">
-          <p class="w-5 h-5 ${
-            answer.options.indexOf(answer.givenAns) === 0
-              ? "bg-orange-500 animate-pulse"
-              : "bg-gray-500"
-          } rounded-full text-white flex justify-center items-center">
+          <p class="w-5 h-5 ${answer.options.indexOf(answer.givenAns) === 0
+        ? "bg-orange-500 animate-pulse"
+        : "bg-gray-500"
+      } rounded-full text-white flex justify-center items-center">
             1
           </p>
-          <p class="w-5 h-5 ${
-            answer.options.indexOf(answer.givenAns) === 1
-              ? "bg-orange-500 animate-pulse"
-              : "bg-gray-500"
-          } rounded-full text-white flex justify-center items-center">
+          <p class="w-5 h-5 ${answer.options.indexOf(answer.givenAns) === 1
+        ? "bg-orange-500 animate-pulse"
+        : "bg-gray-500"
+      } rounded-full text-white flex justify-center items-center">
             2
           </p>
-          <p class="w-5 h-5 ${
-            answer.options.indexOf(answer.givenAns) === 2
-              ? "bg-orange-500 animate-pulse"
-              : "bg-gray-500"
-          } rounded-full text-white flex justify-center items-center">
+          <p class="w-5 h-5 ${answer.options.indexOf(answer.givenAns) === 2
+        ? "bg-orange-500 animate-pulse"
+        : "bg-gray-500"
+      } rounded-full text-white flex justify-center items-center">
             3
           </p>
-          <p class="w-5 h-5 ${
-            answer.options.indexOf(answer.givenAns) === 3
-              ? "bg-orange-500 animate-pulse"
-              : "bg-gray-500"
-          } rounded-full text-white flex justify-center items-center">
+          <p class="w-5 h-5 ${answer.options.indexOf(answer.givenAns) === 3
+        ? "bg-orange-500 animate-pulse"
+        : "bg-gray-500"
+      } rounded-full text-white flex justify-center items-center">
             4
           </p>
         </div>
@@ -115,15 +110,12 @@ const showAnswers = (data) => {
     quizContainer.innerHTML += `<div class="text-left">
           <h1 class="mt-4 mb-3 text-md">${idx + 1 + ". " + answer.question}</h1>
           <div>
-          <h1 class="text-sm">Given Answer: <span class="text-orange-600">${
-            answer.givenAns
-          }</span></h1>
-          <h1 class="text-sm">Correct Answer: <span class="text-green-600">${
-            answer.answer
-          }</span></h1>
-          <p class="text-[10px] mt-5"><span class="font-medium mr-1">Description:</span>${
-            answer.description
-          }</p>
+          <h1 class="text-sm">Given Answer: <span class="text-orange-600">${answer.givenAns
+      }</span></h1>
+          <h1 class="text-sm">Correct Answer: <span class="text-green-600">${answer.answer
+      }</span></h1>
+          <p class="text-[10px] mt-5"><span class="font-medium mr-1">Description:</span>${answer.description
+      }</p>
           </div>
         </div>`;
   });

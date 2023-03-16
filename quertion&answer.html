@@ -16,7 +16,7 @@
 <body>
     <header>
         <nav>
-            <div class="navbar w-11/12 mx-auto rounded bg-sky-100">
+            <div class="navbar w-11/12 mx-auto rounded bg-sky-50">
                 <div class="flex-1">
                     <a class="btn btn-ghost normal-case text-xl">Quertion And Answer </a>
                 </div>
@@ -32,22 +32,116 @@
                 </div>
             </div>
         </nav>
+        <!-- header section -->
+        <section>
+            <h1 class="text-center my-6 text-2xl italic text-green-600 font-semibold">If you click on the
+                quertion button,
+                the modal
+                will
+                open and the
+                answer
+                will come!!!
+            </h1>
+        </section>
     </header>
     <!-- _____________________________header part end______________________________ -->
     <main>
-        <section class="w-10/12 mx-auto mt-12">
-            <!-- The button to open modal -->
-            <label for="my-modal-3" class="btn">Quertion-1</label>
 
-            <!-- Put this part before tag -->
-            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box relative">
-                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia
-                        for
-                        free!</p>
+        <section class="w-10/12 mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-center ">
+            <div class="quertion-1 border p-5 rounded-xl">
+                <!-- The button to open modal -->
+                <label for="my-modal-3" class="bg-orange-500 rounded">Quertion-1 <br>
+                    <p class="">What is the difference between map,filter,find and forEach?</p>
+                </label>
+
+                <!-- Put this part before tag -->
+                <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box relative">
+                        <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <p class="py-4">MAP* Map hlo kono akta array theke jodi kono return pate cai tahole map sei
+                            array er upore map korte hbe & kono element ke niye onno akta array te
+                            rakte cai thahole map use korte hoy!!</p>
+
+                        <p class="py-4">FILTER* kono akta condition ke je je value full fil korbe ,filter shudhu tader
+                            kei output dibe!!! </p>
+
+                        <p class="py-4">FIND* kono akta condition ke je je value full fil korbe ,find shudhu frist
+                            akta element ke output dibe!!! </p>
+
+                        <p>FOREACH* forEach kono kicu return kore na , kono akta array theke jodi amr return er proyojon
+                            na hoy tahole forEach use korte
+                            hbe !!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quertion-2 border p-5 rounded-xl">
+                <!-- The button to open modal -->
+                <label for="my-modal-6" class=" bg-orange-500 rounded">Quertion-2</label>
+                <p>What is the difference between Local storage,Session storage and
+                    Cookies?</p>
+
+                <!-- Put this part before tag -->
+                <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                <div class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <p>Local Stroage* local stroage a kono kicu add kore rakle page reload,new tap
+                            open,browser theke ber hoye ase abar browser open korle & notun kore login korle o local
+                            stroage a data save hoye thake !!!</p>
+                        <p class="py-4">Session storage* local stroage er mtoi just akta different ace seta hlo kono
+                            somoy
+                            jodi browser close kora hoy tahole Session storage er data ar sekhane thake na delete hoye
+                            jay !!!</p>
+                        <p>Cookies* cookies a normali information store kore rakha hoy !!</p>
+                        <div class="modal-action">
+                            <label for="my-modal-6" class="btn">back!</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quertion-3 border rounded-xl py-3">
+                <!-- The button to open modal -->
+                <label for="my-modal" class="bg-orange-500 rounded">Quertion-3</label>
+                <p>What is js event loop?</p>
+
+                <!-- Put this part before tag -->
+                <input type="checkbox" id="my-modal" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box">
+
+                        <p class="py-4">Js event loop* <br>javascript hlo single threaded language but se multipul
+                            language er mto kaj kore thake & js non-blocking language, Ar ai kaj gulo eventloop er jnnoi
+                            hoye thake !!!</p>
+                        <div class="modal-action">
+                            <label for="my-modal" class="btn">Exit!</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quertion-4 border rounded-xl py-3">
+                <!-- The button to open modal -->
+                <a href="#my-modal-2" class="bg-orange-500 rounded">Quertion-4</a>
+                <p>How workikng to choose Quiz function & quiz Timer function</p>
+                <!-- Put this part before tag -->
+                <div class="modal" id="my-modal-2">
+                    <div class="modal-box">
+
+                        <p class="py-4">Quiz Timer function er kaj hlo: <br>setInterval name akta arrow function create
+                            kore hoyece tar vitore html theke id diye akta section ke dhore ane variable a rakha
+                            hoice,,tar akta inisial value set kore setake 60 diye divition kore akta variable rakha
+                            hoice and next akta
+                            variable a inisial value ke rekhe 60 diye % kora hoice tarpor variable duitake ternery
+                            oparetor diye check kora hoice ,,,,next daynamicaly html set kore tar vitore condition diye
+                            check kora hoyece!!!
+                        </p>
+                        <p>choose Quiz function kaj hlo: chooseQuiz function name akta arrow function create korar por
+                            tar vitore tar duita perameter deya hoice|index.js file a answer name diye akta empty array
+                            create korar por setake function er vitore find kora hoice tarpor condition diye check korar
+                            por displayAnswer name akta function ke call kora hoice!!! <br></p>
+                        <div class="modal-action">
+                            <a href="#" class="btn">Yay!</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
